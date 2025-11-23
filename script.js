@@ -66,3 +66,47 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+// ... inside your data fetch function ...
+const temp = data.hourly.temperature_2m[currentHour];
+const feelsLike = data.hourly.apparent_temperature[currentHour];
+
+// Update Main Number
+document.getElementById('feels-like-value').innerText = `${feelsLike}°`;
+
+// Calculate Difference
+const diff = feelsLike - temp;
+const badge = document.getElementById('diff-badge');
+const valSpan = document.getElementById('diff-val');
+const iconSpan = document.getElementById('diff-icon');
+
+// Reset classes
+badge.className = 'diff-badge'; 
+
+if (diff > 0.5) {
+    // Warmer
+    badge.classList.add('warmer');
+    valSpan.innerText = `${Math.round(diff)}° Warmer`;
+    iconSpan.innerText = '▲'; // Up arrow
+} else if (diff < -0.5) {
+    // Cooler
+    badge.classList.add('cooler');
+    valSpan.innerText = `${Math.round(Math.abs(diff))}° Cooler`;
+    iconSpan.innerText = '▼'; // Down arrow
+} else {
+    // Same
+    badge.classList.add('same');
+    valSpan.innerText = `Feels accurate`;
+    iconSpan.innerText = '=';
+}

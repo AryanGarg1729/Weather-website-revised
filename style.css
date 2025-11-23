@@ -42,7 +42,7 @@ body{
     /* overflow-y: auto; */
 }
 
-/* @media (max-width: 900px) {
+@media (max-width: 900px) {
     .container {
         flex-direction: column;
         height: auto;
@@ -56,7 +56,7 @@ body{
     .main-content {
         width: 100%;
     }
-} */
+}
 
 .top-header h2{
     color:#2C3E50;
@@ -177,4 +177,32 @@ body{
 .weather-item .temp{
     font-weight: 600;
     font-size: 1.1rem;
+}
+
+
+.card-footer {
+    margin-top: auto;
+}
+
+.diff-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.diff-badge.warmer {
+    /* background-color: #ffe0e0;  */
+    color: #d9534f;
+}
+.diff-badge.cooler {
+    /* background-color: #e0f0ff;  */
+    color: #5C9CE5;
+}
+.diff-badge.same {
+    /* background-color: #f0f0f0; */
+    color: #8DA1B5;
 }
