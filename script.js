@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const ctx = document.getElementById('weatherChart').getContext('2d');
-    let weatherChart;
+    
+
 
     function initChart(hourlyData) {
         // Destroy existing chart if it exists
@@ -64,4 +65,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-});
+})
