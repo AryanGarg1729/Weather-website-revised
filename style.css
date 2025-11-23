@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
     background-color: #D6E6F8;
     height: 100vh;
     display: flex;
@@ -147,9 +147,9 @@ body{
     text-align: center;
 }
 .card-value span {
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #8DA1B5;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2C3E50;
     margin-left: 5px;
 }
 .progress-labels{
@@ -157,11 +157,10 @@ body{
     justify-content: space-between;
     font-size: 0.7rem;
     color: #8DA1B5;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
 .progress-bar{
     height: 8px;
-    flex: 1;
     background: #F1F3F6;
     border-radius: 3px;
     position: relative;
@@ -174,4 +173,8 @@ body{
     position: absolute;
     top: 0;
     left: 0;
+}
+.weather-item .temp{
+    font-weight: 600;
+    font-size: 1.1rem;
 }
