@@ -107,6 +107,9 @@ body{
 .chart-container{
     height: 100px;
     width: 100%;
+   position: relative; 
+    overflow: hidden;   
+    padding: 0 10px;
 }
 .more-details h3{
     color: #2C3E50;
