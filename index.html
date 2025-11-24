@@ -18,6 +18,12 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/duotone/style.css">
 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634336/skycons.min.js"></script>
+
+
+
 <link rel="stylesheet" href="./style.css">
 
 
@@ -63,7 +69,9 @@
                     <span id="condition-text">Clear Sky</span>
                 </div>
             </div>
-            <div class="visual"></div>
+            <div class="weather-visual">
+                <canvas id="weather-icon" width="128" height="128"></canvas>
+            </div>
         </aside>    
         <main class="main-content">
             <header class="top-header">
@@ -271,6 +279,20 @@
         
     
     
-    <script src="./script.js"></script>
+    <!-- <script src="./script.js"></script> -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // 1. Initialize with a color (matches your text/theme)
+        const skycons = new Skycons({"color": "white"});
+
+        // 2. Add the icon to the canvas with ID "weather-icon"
+        skycons.add("weather-icon", Skycons.CLEAR_DAY);
+
+        // 3. Start animation
+        skycons.play();
+    });
+</script>
+
 </body>
+
 </html>
