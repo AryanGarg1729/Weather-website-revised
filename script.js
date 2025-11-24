@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const ctx = document.getElementById('weatherChart').getContext('2d');
     
 
-
     function initChart(hourlyData) {
         // Destroy existing chart if it exists
         if (weatherChart) weatherChart.destroy();
@@ -63,23 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-
-
-})
-
-
-
-
-
-
-
-
-
-
-
-
-// ... inside your data fetch function ...
-const temp = data.hourly.temperature_2m[currentHour];
+    const temp = data.hourly.temperature_2m[currentHour];
 const feelsLike = data.hourly.apparent_temperature[currentHour];
 
 // Update Main Number
@@ -110,3 +93,51 @@ if (diff > 0.5) {
     valSpan.innerText = `Feels accurate`;
     iconSpan.innerText = '=';
 }
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+// // 1. Get UV Index (Ensure your API URL includes 'uv_index')
+// const uvIndex = data.hourly.uv_index[currentHour];
+
+// // 2. Update the number
+// document.getElementById('uv-value').innerText = uvIndex;
+
+// // 3. Update the Status Text
+// const uvStatus = document.getElementById('uv-status');
+// if (uvIndex <= 2) uvStatus.innerText = "Low";
+// else if (uvIndex <= 5) uvStatus.innerText = "Moderate";
+// else if (uvIndex <= 7) uvStatus.innerText = "High";
+// else if (uvIndex <= 10) uvStatus.innerText = "Very High";
+// else uvStatus.innerText = "Extreme";
+
+// // 4. Update the Progress Bar
+// // We map 0-11 to 0-100%. If it's higher than 11, we cap it at 100%.
+// const uvPercentage = Math.min((uvIndex / 11) * 100, 100);
+// document.getElementById('uv-bar').style.width = `${uvPercentage}%`;
+
+
+
+// // --- PRECIPITATION ---
+// const precipMm = hourly.precipitation[currentHour];
+
+// // 1. Update Number
+// document.getElementById('precipitation-value').innerText = precipMm;
+// document.getElementById('precipitation-status').innerText = "mm"; // ensuring unit is correct
+
+// // 2. Update Progress Bar
+// // We set 10mm as the "max" for the bar (100% width).
+// // Anything above 10mm is extremely heavy rain and stays at 100%.
+// const precipPct = Math.min((precipMm / 10) * 100, 100);
+// document.getElementById('precipitation-bar').style.width = `${precipPct}%`;

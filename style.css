@@ -30,6 +30,7 @@ body{
     position: relative;
     flex-direction: column;
     /* z-index: 1; */
+    color: white;
 }
 .main-content{
     width: 70%;
@@ -39,10 +40,11 @@ body{
     display: flex;
     flex-direction: column;
     gap: 30px;
-    /* overflow-y: auto; */
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
     .container {
         flex-direction: column;
         height: auto;
@@ -56,7 +58,7 @@ body{
     .main-content {
         width: 100%;
     }
-}
+} */
 
 .top-header h2{
     color:#2C3E50;
@@ -205,4 +207,58 @@ body{
 .diff-badge.same {
     /* background-color: #f0f0f0; */
     color: #8DA1B5;
+}
+.sidebar-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.search{
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 70%;
+}
+.search-btn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+#city{
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: 5px;
+    outline: none;
+}
+::placeholder {
+  font-family: 'Outfit', sans-serif;
+  color: white;
+}
+.location-info{
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+.temp-display h1{
+    font-size: 6rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 30px;
+}
+.condition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    margin-top: 10px;
 }

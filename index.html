@@ -25,7 +25,45 @@
 <body>
     <div class="container">
         <aside class="sidebar">
-
+            <div class="sidebar-header">
+                <div class="search">
+                    <input type="text" id="city" placeholder="Search city..." >
+                    <button class="search-btn" id="search-btn">
+                        <i class="ph ph-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="location-info">
+                <div class="city-info">
+                    <div class="city">
+                        <i class="ph ph-paper-plane-tilt"></i>
+                        <span id="city-name">New York, US</span>
+                    </div>
+                    <div class="date">
+                        <span id="date-time">Monday, 20 Mar 2025</span>
+                    </div>
+                </div>
+                <div class="sun-info">
+                    <div class="sunrise">
+                        <i class="ph ph-sun-horizon"></i>
+                        <span id="sunrise-time">6:12 AM</span>
+                    </div>
+                    <div class="sunset">
+                        <i class="ph ph-moon"></i>
+                        <span id="sunset-time">7:45 PM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="current-weather">
+                <div class="temp-display">
+                    <h1 id="current-temp">0°</h1>
+                </div>
+                <div class="condition">
+                    <i class="ph ph-sun"></i>
+                    <span id="condition-text">Clear Sky</span>
+                </div>
+            </div>
+            <div class="visual"></div>
         </aside>    
         <main class="main-content">
             <header class="top-header">
@@ -150,17 +188,15 @@
                         </div>
                         <div class="card-value">
                             <span id="precipitation-value">0</span>
-                            <span id="precipitation-status">cm</span>
+                            <span id="precipitation-status">mm</span>
                         </div>
                         <div class="progress-labels">
-                            <span>Good</span>
-                            <span>Fair</span>
-                            <span>Moderate</span>
-                            <span>Poor</span>
-                            <span>Very Poor</span>
+                            <span>0</span>
+                            <span>5</span>
+                            <span>10</span>
                         </div>
                         <div class="progress-bar">
-                            <div class="progress-fill " style="width: 26%;">
+                            <div class="progress-fill " style="width: 0%;" id="precipitation-bar">
                                 
                             </div>
                         </div>
@@ -173,18 +209,16 @@
                             </div>
                         </div>
                         <div class="card-value">
-                            <span id="uv-value">3</span>
-                            <span id="uv-status">Medium</span>
+                            <span id="uv-value">0</span>
+                            <span id="uv-status">Low</span>
                         </div>
                         <div class="progress-labels">
-                            <span>Good</span>
-                            <span>Fair</span>
-                            <span>Moderate</span>
-                            <span>Poor</span>
-                            <span>Very Poor</span>
+                            <span>0</span>
+                            <span>6</span>
+                            <span>11+</span>
                         </div>
                         <div class="progress-bar">
-                            <div class="progress-fill " style="width: 26%;">
+                            <div class="progress-fill" style="width: 0%;">
                                 
                             </div>
                         </div>
