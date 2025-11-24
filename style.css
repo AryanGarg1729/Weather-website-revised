@@ -203,15 +203,15 @@ body{
     font-weight: 500;
 }
 .diff-badge.warmer {
-    /* background-color: #ffe0e0;  */
+    background-color: #ffe0e0; 
     color: #d9534f;
 }
 .diff-badge.cooler {
-    /* background-color: #e0f0ff;  */
+    background-color: #e0f0ff; 
     color: #5C9CE5;
 }
 .diff-badge.same {
-    /* background-color: #f0f0f0; */
+    background-color: #f0f0f0;
     color: #8DA1B5;
 }
 .sidebar-header{
