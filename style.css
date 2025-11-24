@@ -44,7 +44,12 @@ body{
     overflow-x: hidden;
 }
 
-/* @media (max-width: 900px) {
+@media (max-width: 900px) {
+    body{
+        align-items: flex-start;
+        padding: 20px;
+        overflow: auto;
+    }
     .container {
         flex-direction: column;
         height: auto;
@@ -58,7 +63,8 @@ body{
     .main-content {
         width: 100%;
     }
-} */
+}
+
 
 .top-header h2{
     color:#2C3E50;
@@ -264,4 +270,10 @@ body{
 }
 #graphic{
     font-size: 100px;
+}
+
+.weather-visual{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }

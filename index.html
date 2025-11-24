@@ -20,7 +20,6 @@
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634336/skycons.min.js"></script>
 
 
 
@@ -70,7 +69,7 @@
                 </div>
             </div>
             <div class="weather-visual">
-                <canvas id="weather-icon" width="128" height="128"></canvas>
+                <img id="weather-icon" src="https://cdn.jsdelivr.net/npm/@bybas/weather-icons@latest/production/fill/all/clear-day.svg" alt="Weather Icon" width="200">
             </div>
         </aside>    
         <main class="main-content">
@@ -277,21 +276,9 @@
         </main>      
     </div>
         
-    
-    
-    <!-- <script src="./script.js"></script> -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // 1. Initialize with a color (matches your text/theme)
-        const skycons = new Skycons({"color": "white"});
 
-        // 2. Add the icon to the canvas with ID "weather-icon"
-        skycons.add("weather-icon", Skycons.CLEAR_DAY);
+    
 
-        // 3. Start animation
-        skycons.play();
-    });
-</script>
 
 </body>
 
