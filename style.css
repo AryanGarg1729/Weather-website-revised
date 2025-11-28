@@ -229,7 +229,7 @@ body{
     background: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     padding: 5px 10px;
-    width: 70%;
+    width: 100%
 }
 .search-btn{
     background: transparent;
@@ -280,3 +280,7 @@ body{
     justify-content: center;
     margin-top: 50px;
 }
+
+
+
+
