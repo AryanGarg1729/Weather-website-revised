@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const cityInput = document.getElementById("city");
     let weatherChart;
 
-    fetchWeatherData(51.5074, -0.1278, "London");
+    fetchWeatherData(30.33625, 76.3922, "Patiāla");
 
     searchBtn.addEventListener("click", () => getCityCoordinates());
     
@@ -83,6 +83,8 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("condition-text").innerText = iconData.label;
         document.getElementById("weather-icon").src = iconData.imgUrl;
 
+        document.getElementById("condition-icon").className = `ph ${getPhosphorIcon(current.weather_code, current.is_day)}`;
+
     }
 
     function updateCards(weatherData, aqiData) {
@@ -129,15 +131,19 @@ document.addEventListener("DOMContentLoaded", function() {
         const diff = feels - temp;
         const badge = document.getElementById('diff-badge');
         const valSpan = document.getElementById('diff-val');
+        const diff_icon = document.getElementById('diff-icon');
         badge.className = 'diff-badge';
         if (diff > 0.5) {
             badge.classList.add('warmer');
+            diff_icon.innerText = "▲";
             valSpan.innerText = `${Math.round(diff)}° Warmer`;
         } else if (diff < -0.5) {
             badge.classList.add('cooler');
+            diff_icon.innerText = "▼";
             valSpan.innerText = `${Math.round(Math.abs(diff))}° Cooler`;
         } else {
             badge.classList.add('same');
+            diff_icon.innerText = "=";
             valSpan.innerText = `Accurate`;
         }
 
@@ -158,6 +164,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const temp = Math.round(data.hourly.temperature_2m[index]);
             const code = data.hourly.weather_code[index];
             const isDay = data.hourly.is_day[index];
+            
 
             const iconClass = getPhosphorIcon(code, isDay);
 
@@ -260,6 +267,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function getPhosphorIcon(code, isDay) { 
+
+        let icon = isDay ? "ph-sun" : "ph-moon";
         if (code <= 1) icon = isDay ? "ph-sun":"ph-moon";
         else if (code === 2) icon = isDay ? "ph-cloud-sun" : "ph-cloud-moon";
         else if (code === 3) icon = "ph-cloud";
@@ -269,22 +278,6 @@ document.addEventListener("DOMContentLoaded", function() {
         else if (code >= 96) icon = "ph-cloud-lightning";
         return icon;
     }
-    
-
-
-    // function updateTheme(isDay) {
-    //     const body = document.body;
-        
-    //     // 0 = Night, 1 = Day
-    //     if (isDay === 0) {
-    //         body.classList.add("dark-mode");
-    //     } else {
-    //         body.classList.remove("dark-mode");
-    //     }
-    // }
-
-
-
 
 
 });
